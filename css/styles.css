@@ -736,6 +736,10 @@ button {
     border: 1.25px solid var(--color-bgr-dark);
     border-radius: 2px;
 }
+.modal-checkbox:focus + .modal-checkbox-policy::before {
+    border-color: var(--color-accent);
+
+}
 .modal-checkbox:checked + .modal-checkbox-policy::before {
     background-color: var(--color-focus);
     border: none;
