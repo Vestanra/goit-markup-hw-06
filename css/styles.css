@@ -724,29 +724,27 @@ button {
 .modal-checkbox-policy a {
     color: #4D5AE5;
 }
-.modal-checkbox-icon {
-    fill: var(--color-footer-logo)
+.checkbox-policy-text {
+    display: inline-block;
 }
-.modal-checkbox-policy::before {
-    content: '';
-    display: block;
+
+.modal-checkbox-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 8px;
     width: 16px;
     height: 16px;
     border: 1.25px solid var(--color-bgr-dark);
     border-radius: 2px;
+    fill: transparent;   
 }
-.modal-checkbox:focus + .modal-checkbox-policy::before {
-    border-color: var(--color-accent);
-
-}
-.modal-checkbox:checked + .modal-checkbox-policy::before {
+.modal-checkbox:checked + .modal-checkbox-policy .modal-checkbox-icon {
     background-color: var(--color-focus);
     border: none;
-    background-image: url(../images/check.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+    fill: var(--color-footer-logo)
 }
-.modal-checkbox-policy span {
-    display: inline-block;
+.modal-checkbox:focus + .modal-checkbox-policy .modal-checkbox-icon {
+    border-color: var(--color-accent);
 }
+
